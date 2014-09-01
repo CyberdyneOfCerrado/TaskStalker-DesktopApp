@@ -1,14 +1,20 @@
 package org.cyberdyne.taskstalker.main;
 
-import org.cyberdyne.taskstalker.rede.HandleSocket;
+import java.awt.Color;
+
+import javax.swing.JOptionPane;
+
+import org.cyberdyne.taskstalker.controles.CoreController;
+import org.cyberdyne.taskstalker.visao.InfoWindow;
+
 
 public class Main {
 	public static void main(String [] args ) throws InterruptedException{
-		HandleSocket hs = new HandleSocket("ws://echo.websocket.org");
-		hs.start();
+		CoreController cc = new CoreController();
+		cc.startCore();
 		
 		while(true){
-			hs.send("Olá mundo");
+			cc.send("Olá mundo");
 			Thread.sleep(1000);
 		}
 	};

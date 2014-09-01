@@ -40,8 +40,9 @@ public class WebSocket {
 				hs.onOpen(arg0);
 			};
 			
+			@SuppressWarnings("unused")
 			public void onReady(){
-				hs.OnReady(this.getReadyState());
+				hs.onReady(this.getReadyState());
 			};
 		};
 	  wcc.connect();

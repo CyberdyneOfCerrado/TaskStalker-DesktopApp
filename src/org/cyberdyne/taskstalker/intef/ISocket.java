@@ -11,6 +11,6 @@ public interface ISocket {
 	public void onError(Exception arg0) ;
 	public void onMessage(String arg0); 
 	public void onOpen(ServerHandshake arg0);
-	public void OnReady(int arg0);
+	public void onReady(int arg0);
 	public void send(String arg0);
 }

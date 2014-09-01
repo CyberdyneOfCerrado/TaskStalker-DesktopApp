@@ -4,17 +4,19 @@
 
 package org.cyberdyne.taskstalker.rede;
 
+import org.cyberdyne.taskstalker.componentes.Core;
 import org.cyberdyne.taskstalker.intef.ISocket;
-import org.java_websocket.client.WebSocketClient;
 import org.java_websocket.handshake.ServerHandshake;
 
 public class HandleSocket implements ISocket {
 	private String uri;
 	private boolean isStarted;
 	private WebSocket ws;
+	private Core core;
 	
-	public HandleSocket( String uri){
+	public HandleSocket( String uri, Core core){
 		this.uri = uri;
+		this.core = core;
 		isStarted = false;
 	};
 	
@@ -32,27 +34,27 @@ public class HandleSocket implements ISocket {
 	
 	@Override
 	public void onClose(int arg0, String arg1, boolean arg2) {
-		System.out.println("1");
+		core.onClose(arg0, arg1, arg2);
 	};
 
 	@Override
 	public void onError(Exception arg0) {
-		System.out.println("2");
+		core.onError(arg0);;
 	};
 
 	@Override
 	public void onMessage(String arg0) {
-		System.out.println("Alguém: "+ arg0);
+		core.onMessage(arg0);
 	};
 
 	@Override
 	public void onOpen(ServerHandshake arg0) {
-		System.out.println("Conectado: "+ arg0.getHttpStatusMessage());
+		core.onOpen(arg0);
 	};
 
 	@Override
-	public void OnReady(int arg0) {
-		System.out.println("5");
+	public void onReady(int arg0) {
+		core.onReady(arg0);
 	};
 
 	@Override

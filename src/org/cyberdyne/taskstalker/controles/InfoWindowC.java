@@ -3,6 +3,7 @@ package org.cyberdyne.taskstalker.controles;
 import java.awt.Dimension;
 import java.awt.Toolkit;
 
+import org.cyberdyne.taskstalker.enums.TypeWindow;
 import org.cyberdyne.taskstalker.visao.InfoWindow;
 
 public class InfoWindowC {
@@ -22,14 +23,24 @@ public class InfoWindowC {
 	
 	public synchronized void decrementCount(){
 		countInfo--;
+		System.out.println("decremento " + countInfo);
 	};
 	
-	public synchronized void newInfo(String title, String content , String action){
+	public synchronized void incrementCount(){
 		countInfo++;
-		InfoWindow info = new InfoWindow(title,content,action);
+		System.out.println("incremento " + countInfo);
+	}
+	
+	public synchronized int getCount(){
+		return countInfo;
+	}
+	
+	public void newInfo(String title, String content , String action , TypeWindow tw){
+		InfoWindow info = new InfoWindow(title,content,action, tw);
 		int width  = d.width - info.getWidth();
-		int height = countInfo * info.getHeight() - 150; 
+		int height = getCount() * info.getHeight(); 
+		incrementCount();
 		info.setLocation(width,height);
 		info.start();
-	}
+	};
 }

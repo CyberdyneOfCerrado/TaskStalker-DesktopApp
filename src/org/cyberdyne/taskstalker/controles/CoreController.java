@@ -26,7 +26,7 @@ public class CoreController extends Core  {
 
 	@Override
 	public void onMessage(String arg0) {
-		new InfoWindow("Iniciou", arg0);
+		System.out.println("Olá");
 	};
 
 	@Override

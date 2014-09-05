@@ -1,21 +1,195 @@
 package org.cyberdyne.taskstalker.main;
 
-import java.awt.Color;
+import org.cyberdyne.taskstalker.controles.InfoWindowC;
 
-import javax.swing.JOptionPane;
 
-import org.cyberdyne.taskstalker.controles.CoreController;
-import org.cyberdyne.taskstalker.visao.InfoWindow;
 
 
 public class Main {
 	public static void main(String [] args ) throws InterruptedException{
-		CoreController cc = new CoreController();
-		cc.startCore();
+		InfoWindowC iw =  InfoWindowC.getInstance();
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
 		
-		while(true){
-			cc.send("Olá mundo");
-			Thread.sleep(1000);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(1);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(1);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(4);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(1);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(1);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(2);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(1);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(1);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(4);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(1);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(6);
+iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(1);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(1);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(4);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(1);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(1);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(2);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(1);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(1);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(4);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(1);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(6);
+iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(1);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(1);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(4);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(1);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(1);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(2);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(1);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(1);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(4);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(1);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(6);
+iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(1);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(1);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(1);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(1);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(1);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(1);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(1);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(1);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(1);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(1);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(1);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(1);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(1);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(1);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(4);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(1);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(1);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(2);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(1);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(1);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(4);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(1);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(6);
+iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(1);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(1);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(4);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(1);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(1);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(2);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(1);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(1);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(4);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(1);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(6);
+iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(1);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(1);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(4);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(1);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(1);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(2);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(1);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(1);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(4);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(1);
+		iw.newInfo("allyson","Tarefa de alguma coisa","Iniciou uma atividade");
+		sleep(6);
+	};
+	private static void sleep( int latency ){
+		try {
+			Thread.sleep(latency* 1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 	};
 }
+

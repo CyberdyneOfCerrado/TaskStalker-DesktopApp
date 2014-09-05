@@ -4,7 +4,7 @@
 
 package org.cyberdyne.taskstalker.componentes;
 
-import org.cyberdyne.taskstalker.intef.ISocket;
+
 import org.cyberdyne.taskstalker.rede.HandleSocket;
 import org.java_websocket.handshake.ServerHandshake;
 

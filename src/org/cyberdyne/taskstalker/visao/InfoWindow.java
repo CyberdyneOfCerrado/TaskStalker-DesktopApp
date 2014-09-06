@@ -24,27 +24,28 @@ public class InfoWindow extends JWindow implements Runnable {
     private final int fadeLatency = 20;
     private final int timePopup = 2 * 1000;
 	
-	public InfoWindow(String title , String content , String action, TypeWindow tw ){
+	public InfoWindow(String title , String content, TypeWindow tw ){
 		this.tw = tw;
 		Container c = super.getContentPane();
 		c.setLayout(null);
 		
-		c.add(init(title,content,action));
+		c.add(init(title,content));
 		super.setSize(width,height);
 		super.setOpacity(0.0f);
 		au = new Audio();
 	};
 	
-	private JPanel init( String title , String content, String action ){
+	private JPanel init( String title , String content ){
 		JPanel p = new JPanel();
 		p.setBackground( new Color(32,32,32) );
 		p.setLayout(null);
 		p.setSize(width,height);
 		
+		String action = null;
 		 
 		JLabel icon = new JLabel( new ImageIcon(getClass().getResource("/img/da.jpg")));
 		JLabel name = new JLabel(title);
-		JLabel act = new JLabel(action);
+		JLabel act = new JLabel();
 		JLabel describe = new JLabel(content);
 		
 		name.setForeground(Color.white);
@@ -53,19 +54,24 @@ public class InfoWindow extends JWindow implements Runnable {
 		switch(tw.toString()){
 		case "START" :
 			act.setForeground(Color.RED);
+			action = "Iniciou uma atividade";
 			break;
 		case "END" :
 			act.setForeground(new Color(72,255,72));
+			action = "Iniciou uma concluíu";
 			break;
 		case "CANCEL" :
 			act.setForeground(Color.YELLOW);
+			action = "Iniciou uma cancelou";
 			break;
 		}
+		
+		act.setText(action);
 		
 		icon.setBounds(1, 1,40,40);
 		name.setBounds(45,1,195,20);
 		act.setBounds(45,20,195,20);
-		describe.setBounds(1,40,195,20);
+		describe.setBounds(1,40,240,20);
 		
 		p.add(icon);
 		p.add(name);
@@ -110,7 +116,6 @@ public class InfoWindow extends JWindow implements Runnable {
 		try {
 			Thread.sleep(latency);
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	};

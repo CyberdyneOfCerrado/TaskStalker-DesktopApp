@@ -5,13 +5,15 @@
 package org.cyberdyne.taskstalker.controles;
 
 import org.cyberdyne.taskstalker.componentes.Core;
+import org.cyberdyne.taskstalker.enums.TypeWindow;
 import org.cyberdyne.taskstalker.visao.InfoWindow;
 import org.java_websocket.handshake.ServerHandshake;
 
 public class CoreController extends Core  {
+	private InfoWindowC iw;
 	
 	public CoreController(){
-		
+		iw = InfoWindowC.getInstance();
 	};
 
 	@Override
@@ -26,7 +28,22 @@ public class CoreController extends Core  {
 
 	@Override
 	public void onMessage(String arg0) {
-		System.out.println("Olá");
+		//Protocolo de comunicação: 
+		//title,@#content,@#tw
+		TypeWindow tw = null;
+		String[] args = arg0.split(",@#");
+		switch(args[2]){
+		case "START":
+			tw = TypeWindow.START;
+			break;
+		case "END":
+			tw = TypeWindow.END;
+			break;
+		case "CANCEL":
+			tw = TypeWindow.CANCEL;
+			break;	
+		}
+		iw.newInfo(args[0], args[1],tw);
 	};
 
 	@Override

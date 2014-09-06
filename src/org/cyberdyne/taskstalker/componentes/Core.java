@@ -5,6 +5,7 @@
 package org.cyberdyne.taskstalker.componentes;
 
 
+import org.cyberdyne.taskstalker.enums.TypeWindow;
 import org.cyberdyne.taskstalker.rede.HandleSocket;
 import org.java_websocket.handshake.ServerHandshake;
 
@@ -17,12 +18,19 @@ public abstract class Core{
 		
 	};
 	
-	public void startActivity( String descricao ){
-		
+	public void startActivity(String title, String content ){
+		String temp = title+",@#"+content+",@#"+TypeWindow.START.toString();
+		this.send(temp);
 	};
 	
-	public void endActivity (){
-		
+	public void endActivity (String title, String content){
+		String temp = title+",@#"+content+",@#"+TypeWindow.END.toString();
+		this.send(temp);
+	};
+	
+	public void cancelActivity(String title, String content){
+		String temp = title+",@#"+content+",@#"+TypeWindow.CANCEL.toString();
+		this.send(temp);
 	};
 	
 	//Descobrir como vai ser o tipo de retorno deste método depois;
@@ -35,7 +43,6 @@ public abstract class Core{
 		hs.start();
 	};
 	
-
 	public abstract void onClose(int arg0, String arg1, boolean arg2);
 	public abstract void onError(Exception arg0);
 	public abstract void onMessage(String arg0);

@@ -35,12 +35,13 @@ public class InfoWindowC {
 		return countInfo;
 	}
 	
-	public void newInfo(String title, String content , String action , TypeWindow tw){
-		InfoWindow info = new InfoWindow(title,content,action, tw);
+	public void newInfo(String title, String content , TypeWindow tw){
+		InfoWindow info = new InfoWindow(title,content, tw);
 		int width  = d.width - info.getWidth();
 		int height = getCount() * info.getHeight(); 
 		incrementCount();
 		info.setLocation(width,height);
 		info.start();
+		info = null;
 	};
 }
